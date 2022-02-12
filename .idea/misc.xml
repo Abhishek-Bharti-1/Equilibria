@@ -14,6 +14,12 @@
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/fragment_pomodoro.xml" value="0.21354166666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/menu/bottom_menu.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.32083333333333336" />
+        <entry key="app/src/main/res/layout/community_list.xml" value="0.32083333333333336" />
+        <entry key="app/src/main/res/layout/fragment_community.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.32083333333333336" />
+        <entry key="app/src/main/res/layout/fragment_pomodoro.xml" value="0.32083333333333336" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.15602836879432624" />
       </map>
     </option>
   </component>
