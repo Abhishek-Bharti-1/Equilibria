@@ -27,17 +27,19 @@ class CommunityFragment : Fragment() {
             R.drawable.c,
             R.drawable.d,
             R.drawable.e,
-            R.drawable.f
+            R.drawable.f,
+            R.drawable.g
         )
 
         heading = arrayOf(
             "Community 1",
             "Community 2",
             "Community 3",
-            "Community 3",
             "Community 4",
             "Community 5",
-            "Community 6"
+            "Community 6",
+            "Community 7"
+
         )
 
     }
