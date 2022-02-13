@@ -23,6 +23,24 @@
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/fragment_pomodoro.xml" value="0.21354166666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/menu/bottom_menu.xml" value="0.25" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp13feb/app/src/main/res/drawable-xxhdpi/btn_background.xml" value="0.2705" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp13feb/app/src/main/res/drawable-xxhdpi/ic_address.xml" value="0.2705" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp13feb/app/src/main/res/drawable-xxhdpi/ic_profile_edit.xml" value="0.2595" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp13feb/app/src/main/res/drawable/google_logo.xml" value="0.2705" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp13feb/app/src/main/res/drawable/gradient_backgrnd.xml" value="0.2705" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp13feb/app/src/main/res/drawable/watch_glass.xml" value="0.2705" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp13feb/app/src/main/res/layout/activity_create_profile.xml" value="0.265625" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp13feb/app/src/main/res/layout/activity_edit_profile.xml" value="0.265625" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp13feb/app/src/main/res/layout/activity_login.xml" value="0.265625" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp13feb/app/src/main/res/layout/activity_main.xml" value="0.265625" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp13feb/app/src/main/res/layout/activity_profile.xml" value="0.265625" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp13feb/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp13feb/app/src/main/res/layout/activity_upload_photo.xml" value="0.265625" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp13feb/app/src/main/res/layout/delete_account_dialog.xml" value="0.265625" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp13feb/app/src/main/res/layout/fragment_community.xml" value="0.265625" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp13feb/app/src/main/res/layout/fragment_home.xml" value="0.265625" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp13feb/app/src/main/res/layout/fragment_pomodoro.xml" value="0.265625" />
+        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp13feb/app/src/main/res/layout/fragment_profile.xml" value="0.265625" />
       </map>
     </option>
   </component>
