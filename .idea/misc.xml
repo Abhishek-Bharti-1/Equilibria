@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.2898148148148148" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/drawable/ic_google.xml" value="0.2015" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/activity_main.xml" value="0.19791666666666666" />
@@ -14,6 +15,7 @@
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/fragment_pomodoro.xml" value="0.21354166666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/menu/bottom_menu.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.32083333333333336" />
         <entry key="app/src/main/res/layout/community_list.xml" value="0.32083333333333336" />
         <entry key="app/src/main/res/layout/fragment_community.xml" value="0.335" />

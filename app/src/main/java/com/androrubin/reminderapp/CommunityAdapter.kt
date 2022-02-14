@@ -9,14 +9,31 @@ import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 
 class CommunityAdapter(private val communityList: ArrayList<Community>) :
+
     RecyclerView.Adapter<CommunityAdapter.ViewHolder>() {
+
+    private lateinit var mListener: onItemClickListener
+
+
+    interface onItemClickListener{
+
+        fun onItemClick(position: Int)
+
+
+    }
+
+    fun setOnItemClickListener(listener: onItemClickListener){
+        mListener = listener
+    }
 
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.community_list,
         parent,false)
-        return ViewHolder(itemView)
+        return ViewHolder(
+            itemView,mListener
+        )
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -29,10 +46,16 @@ class CommunityAdapter(private val communityList: ArrayList<Community>) :
         return communityList.size
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+    class ViewHolder(itemView: View, listener: onItemClickListener) : RecyclerView.ViewHolder(itemView){
 
         val titleImage = itemView.findViewById<ImageView>(R.id.com_prof_pic)
         val heading = itemView.findViewById<TextView>(R.id.com_name)
+
+        init {
+            itemView.setOnClickListener{
+                listener.onItemClick(adapterPosition)
+            }
+        }
 
     }
 }
