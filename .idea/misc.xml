@@ -16,6 +16,25 @@
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/delete_account_dialog.xml" value="0.6" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/fragment_community.xml" value="0.19791666666666666" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/menu/bottom_menu.xml" value="0.2" />
+        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp2/app/src/main/res/layout/activity_chat.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp2/app/src/main/res/layout/activity_create_profile.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp2/app/src/main/res/layout/activity_edit_profile.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp2/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp2/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp2/app/src/main/res/layout/activity_main2.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp2/app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp2/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp2/app/src/main/res/layout/activity_upload_photo.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp2/app/src/main/res/layout/fragment_community.xml" value="0.24456521739130435" />
+        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp2/app/src/main/res/layout/fragment_first.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp2/app/src/main/res/layout/fragment_home.xml" value="0.24456521739130435" />
+        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp2/app/src/main/res/layout/fragment_pomodoro.xml" value="0.1" />
+        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp2/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp2/app/src/main/res/layout/fragment_second.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp2/app/src/main/res/layout/pomo_content.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp2/app/src/main/res/menu/bottom_menu.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp2/app/src/main/res/menu/pomodoro.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.213" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/fragment_community.xml" value="0.21354166666666666" />
@@ -23,6 +42,10 @@
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/fragment_pomodoro.xml" value="0.21354166666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/menu/bottom_menu.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable-mdpi/ic_baseline_message_24.xml" value="0.155" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/community_list.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/fragment_community.xml" value="0.2953125" />
       </map>
     </option>
   </component>
