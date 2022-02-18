@@ -6,6 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileActivity"
+    android:background="#f2fbff"
+
     tools:ignore="SpeakableTextPresentCheck">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -27,19 +29,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
-                app:srcCompat="@color/purple_700" />
+                app:srcCompat="@color/custom_lightblue" />
 
         </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="Email"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editProfile" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/editBannerPic"
@@ -84,7 +76,7 @@
             android:id="@+id/txtEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_baseline_email_24"
+
             android:drawablePadding="4dp"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -112,13 +104,15 @@
             android:id="@+id/editProfile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="4dp"
             android:drawableStart="@drawable/ic_profile_edit"
             android:drawableTint="@color/black"
             android:text="Edit Profile"
             android:textColor="@color/black"
             android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -137,34 +131,37 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="50dp"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtBatchYear">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:contextClickable="true"
-            app:cardCornerRadius="12dp">
-
-            <TextView
-                android:id="@+id/deleteAccount"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_delete"
-                android:padding="10dp"
-                android:text="Delete Account"
-                android:textColor="@color/red"
-                android:textSize="16sp" />
-        </androidx.cardview.widget.CardView>
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:contextClickable="true"
+                app:cardCornerRadius="12dp">
+
+                <TextView
+                    android:id="@+id/deleteAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_delete"
+
+
+                    android:padding="10dp"
+                    android:text="Delete Account"
+                    android:textColor="@color/red"
+                    android:textSize="16sp" />
+            </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView6"
                 android:layout_width="wrap_content"
@@ -201,7 +198,7 @@
             android:id="@+id/txtPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_phone"
+
             android:drawablePadding="4dp"
             android:drawableTint="@color/purple_500"
             android:textColor="@color/black"
@@ -222,13 +219,23 @@
             android:id="@+id/txtBranch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_pen"
+
             android:drawablePadding="4dp"
             android:drawableTint="#1435EE"
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="@+id/textView10"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editProfile" />
 
         <TextView
             android:id="@+id/textView11"
@@ -243,7 +250,7 @@
             android:id="@+id/txtBatchYear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_address"
+
             android:drawablePadding="4dp"
             android:drawableTint="#E91E63"
             android:textColor="@color/black"
