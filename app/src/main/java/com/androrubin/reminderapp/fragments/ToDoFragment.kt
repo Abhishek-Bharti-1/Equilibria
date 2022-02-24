@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -32,16 +33,26 @@ class ToDoFragment : Fragment() {
     private var uid: String? = null
     private lateinit var addtaskDialog: AlertDialog
 
-    override fun onStop() {
-        EventChangeListener()
-        super.onStop()
+//    override fun onStart() {
+//        super.onStart()
+////        Toast.makeText(context, "Running onStart", Toast.LENGTH_SHORT).show()
+//        EventChangeListener()
+//    }
+
+    override fun onResume() {
+        super.onResume()
+        setValue()
     }
 
-    override fun onStart() {
-        super.onStart()
+    fun setValue() {
+        todoArrayList = ArrayList()
+        todoArrayList.clear()
+        todoAdapter = TodoAdapter(todoArrayList)
+        newRecyclerView.layoutManager = LinearLayoutManager(context)
+        newRecyclerView.adapter = todoAdapter
         EventChangeListener()
-    }
 
+    }
 
 
     override fun onCreateView(
@@ -50,7 +61,8 @@ class ToDoFragment : Fragment() {
     ): View? {
 
         val view = inflater.inflate(R.layout.fragment_to_do, container, false)
-        db = FirebaseFirestore.getInstance()
+
+//        Toast.makeText(context, "Running on CreateView", Toast.LENGTH_SHORT).show()
         val addTaskBtn = view.findViewById<FloatingActionButton>(R.id.addTaskBtn)
 
         addTaskBtn.setOnClickListener {
@@ -64,11 +76,10 @@ class ToDoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        todoArrayList = ArrayList()
-        todoAdapter = TodoAdapter(todoArrayList)
-        newRecyclerView.layoutManager = LinearLayoutManager(context)
-        newRecyclerView.adapter = todoAdapter
-        val swipeGesture = object : SwipeGesture() {
+//        Toast.makeText(context, "Running on onViewCreated", Toast.LENGTH_SHORT).show()
+
+
+        val swipeGesture = object : SwipeGesture(requireContext()) {
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
 
                 when (direction) {
@@ -82,7 +93,7 @@ class ToDoFragment : Fragment() {
                         val archiveditem = todoArrayList[viewHolder.adapterPosition]
                         todoArrayList.removeAt(viewHolder.adapterPosition)
                         todoAdapter.addItem(todoArrayList.size, archiveditem)
-
+                        setValue()
                     }
                 }
             }
@@ -113,7 +124,7 @@ class ToDoFragment : Fragment() {
                     "TodoTask" to task.text.toString(),
                     "status" to "0"
                 )
-
+                db = FirebaseFirestore.getInstance()
                 db.collection("Tasks").document("$uid").collection("Todo List")
                     .document("${task.text}")
                     .set(data)
@@ -131,8 +142,10 @@ class ToDoFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
-
-                todoAdapter.notifyDataSetChanged()
+                todoArrayList.clear()
+                EventChangeListener()
+                Toast.makeText(context, "${todoArrayList.size}", Toast.LENGTH_SHORT).show()
+//                todoAdapter.notifyDataSetChanged()
                 task.text = null
             }
         }
@@ -140,7 +153,8 @@ class ToDoFragment : Fragment() {
 
     private fun EventChangeListener() {
         db = FirebaseFirestore.getInstance()
-        db.collection("Tasks").document("$uid").collection("Todo List").orderBy("status",Query.Direction.ASCENDING)
+        db.collection("Tasks").document("$uid").collection("Todo List")
+            .orderBy("status", Query.Direction.ASCENDING)
             .addSnapshotListener(object : EventListener<QuerySnapshot> {
                 override fun onEvent(value: QuerySnapshot?, error: FirebaseFirestoreException?) {
 

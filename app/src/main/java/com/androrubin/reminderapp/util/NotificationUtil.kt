@@ -16,9 +16,11 @@ import com.androrubin.reminderapp.Pomodoro
 import com.androrubin.reminderapp.R
 import com.androrubin.reminderapp.TimerNotificationActionReceiver
 import java.text.SimpleDateFormat
+import java.time.Duration
 import java.util.*
 
-class NotificationUtil {
+class NotificationUtil() {
+
     companion object{
         private const val CHANNEL_ID_TIMER = "menu_timer"
         private const val CHANNEL_NAME_TIMER = "Reminder App Timer"
@@ -69,8 +71,8 @@ class NotificationUtil {
         }
 
 
-        fun showTimerPaused(context: Context){
-            val resumeIntent = Intent(context, TimerNotificationActionReceiver::class.java)
+        fun showTimerPaused(context: Context,time:Int){
+            val resumeIntent = Intent(context, TimerNotificationActionReceiver(time)::class.java)
             resumeIntent.action = AppConstants.ACTION_RESUME
             val resumePendingIntent = PendingIntent.getBroadcast(context,0,resumeIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT)

@@ -6,9 +6,14 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -24,6 +29,8 @@ import java.util.*
 
 class Pomodoro : AppCompatActivity() {
 
+    private var duration:Int = 0
+    private lateinit var addTimeDialog :AlertDialog
     companion object {
         fun setAlarm(context: Context, nowSeconds: Long, secondsRemaining: Long): Long{
             val wakeUpTime = (nowSeconds + secondsRemaining) * 1000
@@ -63,6 +70,20 @@ class Pomodoro : AppCompatActivity() {
 
         binding = ActivityPomodoroBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val builder = AlertDialog.Builder(this)
+
+        val view = layoutInflater.inflate(R.layout.add_time_dialog,null)
+        val yes = view.findViewById<Button>(R.id.saveTimeBtn)
+        val time = view.findViewById<EditText>(R.id.edtTime)
+        yes.setOnClickListener {
+
+            addTimeDialog.dismiss()
+            duration = time.text.toString().toInt()
+        }
+
+        builder.setView(view)
+        addTimeDialog =  builder.create()
 //        val actionbar = supportActionBar
 //        //set back button
 //        actionbar?.setDisplayHomeAsUpEnabled(true)
@@ -115,7 +136,7 @@ class Pomodoro : AppCompatActivity() {
             NotificationUtil.showTimerRunning(this,wakeUpTime)
         }
         else if(timerState == TimerState.Paused){
-            NotificationUtil.showTimerPaused(this)
+            NotificationUtil.showTimerPaused(this,duration)
         }
 
         PrefUtil.setPreviousTimerLengthSeconds(timerLengthSeconds,this)
@@ -181,14 +202,16 @@ class Pomodoro : AppCompatActivity() {
     }
 
     private  fun setNewTimerLength(){
-        val lengthInMinutes = PrefUtil.getTimerLength(this)
+        val lengthInMinutes = PrefUtil.getTimerLength(this,duration)
         timerLengthSeconds = (lengthInMinutes * 60L)
         progress_countdown.max = timerLengthSeconds.toInt()
     }
 
     private fun setPreviousTimerLength(){
+
         timerLengthSeconds = PrefUtil.getPreviousTimerLengthSeconds(this)
         progress_countdown.max= timerLengthSeconds.toInt()
+
     }
 
     private fun updateCountdownUI(){
@@ -236,7 +259,7 @@ class Pomodoro : AppCompatActivity() {
             R.id.action_settings -> {
                 // val intent = Intent(this, SettingsActivity::class.java)
                 //startActivity(intent)
-                Toast.makeText(this,"Clicked Settings",Toast.LENGTH_SHORT).show()
+                addTimeDialog.show()
                 true
             }
             else -> super.onOptionsItemSelected(item)

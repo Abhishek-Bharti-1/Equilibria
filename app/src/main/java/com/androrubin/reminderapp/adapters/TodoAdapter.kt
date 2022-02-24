@@ -69,6 +69,7 @@ class TodoAdapter (private val todoArrayList: ArrayList<TasksTodo>):RecyclerView
             return NotCompleteViewHolder(view)
 
         }
+
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
@@ -76,10 +77,12 @@ class TodoAdapter (private val todoArrayList: ArrayList<TasksTodo>):RecyclerView
         if (holder.javaClass == CompletedViewHolder::class.java){
             val viewholder = holder as CompletedViewHolder
             viewholder.task.text = currentitem.TodoTask
+            viewholder.setIsRecyclable(false)
         }
         else{
             val viewholder = holder as NotCompleteViewHolder
             viewholder.task.text = currentitem.TodoTask
+            viewholder.setIsRecyclable(false)
         }
     }
 

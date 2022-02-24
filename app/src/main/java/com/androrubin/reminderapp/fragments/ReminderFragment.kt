@@ -39,11 +39,6 @@ class ReminderFragment : Fragment() {
     private var uid: String? = null
     private lateinit var addtaskDialog: AlertDialog
 
-    override fun onStop() {
-//        reminderList = ArrayList()
-        EventChangeListener()
-        super.onStop()
-    }
 
     override fun onStart() {
         super.onStart()
@@ -72,12 +67,12 @@ class ReminderFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        reminderList = ArrayList()
-        reminderAdapter = ReminderAdapter(reminderList)
-        newRecyclerView.layoutManager = LinearLayoutManager(context)
-        newRecyclerView.adapter = reminderAdapter
+//        reminderList = ArrayList()
+//        reminderAdapter = ReminderAdapter(reminderList)
+//        newRecyclerView.layoutManager = LinearLayoutManager(context)
+//        newRecyclerView.adapter = reminderAdapter
 
-        val swipeGesture = object : SwipeGesture() {
+        val swipeGesture = object : SwipeGesture(requireContext()) {
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
 
                 when (direction) {
@@ -192,6 +187,10 @@ class ReminderFragment : Fragment() {
     private fun EventChangeListener() {
 
 //        reminderList = ArrayList()
+        reminderList = ArrayList()
+        reminderAdapter = ReminderAdapter(reminderList)
+        newRecyclerView.layoutManager = LinearLayoutManager(context)
+        newRecyclerView.adapter = reminderAdapter
         db = FirebaseFirestore.getInstance()
         db.collection("Tasks").document("$uid").collection("Reminders").orderBy("reminder",Query.Direction.ASCENDING)
             .addSnapshotListener(object : EventListener<QuerySnapshot> {
