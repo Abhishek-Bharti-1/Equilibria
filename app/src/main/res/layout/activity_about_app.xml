@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#f5fafc"
     android:layout_height="match_parent"
     tools:context=".AboutApp">
 
@@ -26,7 +27,9 @@
             android:layout_weight="1"
             android:background="@drawable/btn_background"
             android:gravity="center"
+            android:fontFamily="@font/sf_pro_text_bold"
             android:text="Skip"
+            android:backgroundTint="#4392D2"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -83,7 +86,6 @@
                 android:layout_height="match_parent"
                 app:srcCompat="@drawable/b" />
         </LinearLayout>
-
     </ScrollView>
 
 

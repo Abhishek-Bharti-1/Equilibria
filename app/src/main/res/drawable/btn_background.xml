@@ -5,6 +5,6 @@
         android:bottom="10dp"
         android:right="10dp"
         android:left="10dp"/>
-    <solid android:color="#4392D2"/>
+    <solid android:color="#4594d5"/>
 
 </shape>

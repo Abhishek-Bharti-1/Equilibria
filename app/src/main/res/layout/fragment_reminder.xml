@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#f5fafc"
     android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -21,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="34dp"
         android:clickable="true"
+        android:backgroundTint="#4392D2"
         android:src="@android:drawable/ic_input_add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
