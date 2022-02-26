@@ -12,6 +12,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
         android:orientation="horizontal"
         android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,8 +26,8 @@
             android:layout_height="46dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/btn_background"
-            android:text="Select Image"
             android:fontFamily="@font/sf_pro_text_bold"
+            android:text="Select Image"
             android:textColor="@color/white" />
 
         <android.widget.Button
@@ -34,8 +35,8 @@
             android:layout_width="146dp"
             android:layout_height="46dp"
             android:background="@drawable/btn_background"
-            android:text="Upload Image"
             android:fontFamily="@font/sf_pro_text_bold"
+            android:text="Upload Image"
             android:textColor="@color/white" />
     </LinearLayout>
 
