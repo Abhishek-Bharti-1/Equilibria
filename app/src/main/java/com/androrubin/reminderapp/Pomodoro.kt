@@ -13,7 +13,10 @@
     import android.os.CountDownTimer
     import android.view.Menu
     import android.view.MenuItem
+    import android.widget.Button
+    import android.widget.NumberPicker
     import android.widget.Toast
+    import androidx.appcompat.app.AlertDialog
     import com.google.android.material.snackbar.Snackbar
     import androidx.appcompat.app.AppCompatActivity
     import androidx.core.app.NotificationCompat
@@ -34,6 +37,8 @@
         val CHANNEL_ID="channelID1"
         val CHANNEL_NAME= "channelName1"
         val NOTIFICATION_ID=0
+        private var duration:Int = 0
+        private lateinit var addTimeDialog : AlertDialog
 
         companion object {
             fun setAlarm(context: Context, nowSeconds: Long, secondsRemaining: Long): Long{
@@ -85,12 +90,27 @@
             supportActionBar?.title="  Pomodoro"
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
             val notificationManager=NotificationManagerCompat.from(this)
+            val view = layoutInflater.inflate(R.layout.add_time_dialog,null)
+            val yes = view.findViewById<Button>(R.id.saveTimeBtn)
+            val builder = AlertDialog.Builder(this)
+            val numberPicker = view.findViewById<NumberPicker>(R.id.numberPicker)
+            numberPicker.minValue = 1
+            numberPicker.maxValue = 60
+
+            numberPicker.setOnValueChangedListener { numberPicker, oldval ,newval ->
+                duration = newval
+            }
+            yes.setOnClickListener {
+                addTimeDialog.dismiss()
+            }
+            builder.setView(view)
+            addTimeDialog =  builder.create()
 
             fab_play.setOnClickListener {
 
                 val notification=NotificationCompat.Builder(this,CHANNEL_ID)
                     .setContentTitle("FOCUS ON WORK")
-                    .setContentText("Started a session for ___ min")
+                    .setContentText("Started a session for $duration min")
                     .setSmallIcon(R.drawable.ic_baseline_play_arrow_24)
                     .setPriority(NotificationCompat.PRIORITY_HIGH)
                     .build()
@@ -267,7 +287,7 @@
                 R.id.action_settings -> {
                     // val intent = Intent(this, SettingsActivity::class.java)
                     //startActivity(intent)
-                    Toast.makeText(this,"Clicked Settings",Toast.LENGTH_SHORT).show()
+                    addTimeDialog.show()
                     true
                 }
                 else -> super.onOptionsItemSelected(item)
