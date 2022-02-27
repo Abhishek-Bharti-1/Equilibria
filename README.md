@@ -53,7 +53,7 @@ Here we are with a platform to help one out in managing and performing tasks and
 
 * https://github.com/Abhishek-Bharti-1/Equilibria (github repository link)
 
-* https://www.loom.com/share/a1492df18b594b8ba9ade936f40b3c30 (Apk link)
+* https://drive.google.com/drive/folders/1Zid7mDQaIdGY-AH9qG6pwkucrFgvuDZO?usp=sharing (Apk link)
 
 ## Future Scope
 Block Activity of social media apps or apps of customised preference.
