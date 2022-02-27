@@ -6,8 +6,8 @@ import android.content.Intent
 import com.androrubin.reminderapp.util.NotificationUtil
 import com.androrubin.reminderapp.util.PrefUtil
 
-class TimerNotificationActionReceiver(duration : Int) : BroadcastReceiver() {
-    val time = duration
+class TimerNotificationActionReceiver : BroadcastReceiver() {
+
     override fun onReceive(context: Context, intent: Intent) {
         when(intent.action){
             AppConstants.ACTION_STOP->{
@@ -34,7 +34,7 @@ class TimerNotificationActionReceiver(duration : Int) : BroadcastReceiver() {
                 NotificationUtil.showTimerRunning(context,wakeUpTime)
             }
             AppConstants.ACTION_START->{
-                val minutesRemaining = PrefUtil.getTimerLength(context, time)
+                val minutesRemaining = PrefUtil.getTimerLength(context)
                 val secondsRemaining = minutesRemaining *60L
                 val wakeUpTime = Pomodoro.setAlarm(context,Pomodoro.nowSeconds,secondsRemaining)
                 PrefUtil.setTimerState(Pomodoro.TimerState.Running,context)
