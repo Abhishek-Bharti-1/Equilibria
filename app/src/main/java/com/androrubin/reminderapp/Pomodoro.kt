@@ -102,6 +102,22 @@
             }
             yes.setOnClickListener {
                 addTimeDialog.dismiss()
+                if(timerState==TimerState.Running){
+                    timer.cancel() }
+//            onTimerFinished()
+                timerState = TimerState.Stopped
+
+                setNewTimerLength()
+
+                progress_countdown.progress = 0
+
+                PrefUtil.setSecondsRemaining(timerLengthSeconds,this)
+                secondsRemaining = timerLengthSeconds
+
+
+                updateButtons()
+                updateCountdownUI()
+                timerState=TimerState.Stopped
             }
             builder.setView(view)
             addTimeDialog =  builder.create()
@@ -232,7 +248,7 @@
         }
 
         private  fun setNewTimerLength(){
-            val lengthInMinutes = PrefUtil.getTimerLength(this)
+            val lengthInMinutes = PrefUtil.getTimerLength(this,duration)
             timerLengthSeconds = (lengthInMinutes * 60L)
             progress_countdown.max = timerLengthSeconds.toInt()
         }
