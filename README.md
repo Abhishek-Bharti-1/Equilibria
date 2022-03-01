@@ -77,7 +77,7 @@ Answer -  To help us in our task when we get stuck and to help others too in a s
 Answer - To set the timer and concentrate on a particular task for  the specified duration
 
 #### Question 4 Can we set alarms?
-Answer - No, currently that's not included in our future scope.
+Answer - No, currently not. That's included in our future scope.
 
 
 
