@@ -87,7 +87,7 @@ Answer - No, currently that's not included in our future scope.
 
 
 
-## Creaters :
+## Creators :
 
  - Abhishek Bharti    (https://github.com/Abhishek-Bharti-1)
  - Shreya kumari      (https://github.com/SHREYA262)
